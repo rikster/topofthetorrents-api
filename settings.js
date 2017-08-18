@@ -5,7 +5,7 @@ module.exports = {
     DEBUG: process.env.DEBUG,
 
     // This is the port we'll run the local web server on.
-    DEFAULT_PORT: '',
+    DEFAULT_PORT: '3000',
 
     // Amount of time (in ms) between torrent data updates. (1 hour)
     INDEX_UPDATE_INTERVAL: 1000 * 60 * 60,
