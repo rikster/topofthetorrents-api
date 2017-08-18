@@ -1,0 +1,32 @@
+{
+  "name": "toptorrents-api",
+  "version": "1.0.0",
+  "description": "An API service which always returns the top 100 movie torrents from the web.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdegges/toptorrents-api.git"
+  },
+  "keywords": [
+    "thepiratebay",
+    "torrents",
+    "api",
+    "service"
+  ],
+  "author": "Randall Degges",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/rdegges/toptorrents-api/issues"
+  },
+  "homepage": "https://github.com/rdegges/toptorrents-api#readme",
+  "dependencies": {
+    "async": "^2.0.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "request": "^2.75.0"
+  }
+}
