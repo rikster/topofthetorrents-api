@@ -17,12 +17,12 @@
     "api",
     "service"
   ],
-  "author": "Randall Degges",
+  "author": "Richard Hounslow",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/rdegges/toptorrents-api/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/rdegges/toptorrents-api#readme",
+  "homepage": "https://bitbucket.org/rhounslow/topofthetorrents-api",
   "dependencies": {
     "async": "^2.0.1",
     "cheerio": "^0.22.0",
