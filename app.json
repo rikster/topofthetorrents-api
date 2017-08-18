@@ -10,6 +10,6 @@
   "addons": [
     "stormpath"
   ],
-  "repository": "https://github.com/rdegges/toptorrents-api",
+  "repository": "https://rhounslow@bitbucket.org/rhounslow/topofthetorrents-api.git",
   "success_url": "/"
 }
