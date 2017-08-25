@@ -10,6 +10,7 @@ const PORT = process.env.PORT || settings.DEFAULT_PORT;
 
 let TORRENT_DATA;
 let app = express();
+let updateTimes = 0;
 
 // If we're running in production on Heroku, we should trust that the proxy is
 // securing the incoming request.
@@ -28,8 +29,8 @@ app.get("/", (req, res) => {
     }
 
     async.each(Object.keys(TORRENT_DATA), (item, element) => {
-        let url = req.protocol + "://" + req.hostname + (settings.DEBUG ? ":" + PORT : "") + "/" + item;
-        //let url = req.protocol + "://" + req.hostname + ":" + PORT + "/" + item;
+        //let url = req.protocol + "://" + req.hostname + (settings.DEBUG ? ":" + PORT : "") + "/" + item;
+        let url = req.protocol + "://" + req.hostname + ":" + PORT + "/" + item;
         //let url = req.protocol + "://" + req.hostname  + "/" + item;
         categories.push(url);
     });
@@ -70,7 +71,7 @@ app.use((err, req, res, next) => {
 /**
  * When the server first starts up, we'll do our scraping and build the index.
  */
-console.log("Updating torrent index.");
+console.log("Updating torrent index 1st time.");
 tasks.scrape((err, data) => {
     if (err) {
         console.error(err);
@@ -83,7 +84,7 @@ tasks.scrape((err, data) => {
  * Re-build the torrent index every so often.
  */
 setInterval(() => {
-    console.log("Updating torrent index.");
+    console.log("Updating torrent index. (" + updateTimes + " time)");
     tasks.scrape((err, data) => {
         if (err) {
             console.error(err);
@@ -91,6 +92,8 @@ setInterval(() => {
             TORRENT_DATA = data;
         }
     });
+
+
 }, settings.INDEX_UPDATE_INTERVAL);
 
 app.listen(PORT);

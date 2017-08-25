@@ -1,6 +1,9 @@
 "use strict";
 
 module.exports = {
+    //admin mail
+    ADMIN_EMAIL: "rhounslow@gmail.com",
+
     // Enable debugging mode (useful for local development).
     DEBUG: process.env.DEBUG,
 
@@ -10,11 +13,9 @@ module.exports = {
     // Amount of time (in ms) between torrent data updates. (1 hour)
     INDEX_UPDATE_INTERVAL: 1000 * 60 * 60,
 
-    // thepiratebay.org scraping data._
-    //TPB_URL: "https://hyperproxy.net/",
-    //TPB_URL: "https://piratebays.co.uk/",
-    TPB_URL: "https://tpb.tw",
-    TPB_URL_TOP: "https://tpb.tw/top",
+    //https://proxybay.one/  <- all with correct magnet links
+    TPB_URL: "https://thepiratebay.red/",
+    TPB_URL_TOP: "https://thepiratebay.red/top",
 
     TPB_CATEGORIES: {
         audio: {
