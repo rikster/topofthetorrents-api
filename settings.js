@@ -2,21 +2,50 @@
 
 module.exports = {
     //admin mail
-    ADMIN_EMAIL: "rhounslow@gmail.com",
+    ADMIN_EMAIL: "pkrammer965@gmail.com",
 
     // Enable debugging mode (useful for local development).
     DEBUG: process.env.DEBUG,
 
     // This is the port we'll run the local web server on.
-    DEFAULT_PORT: '3000',
+    DEFAULT_PORT: '3001',
 
     // Amount of time (in ms) between torrent data updates. (1 hour)
     INDEX_UPDATE_INTERVAL: 1000 * 60 * 60,
 
     //https://proxybay.one/  <- all with correct magnet links
-    TPB_URL: "https://thepiratebay.red/",
-    TPB_URL_TOP: "https://thepiratebay.red/top",
-
+    PROXIES :[
+      {
+        URL: 'https://pirateproxy.live/',
+        Alive: null
+      },
+      {
+        URL: 'https://thehiddenbay.com/',
+        Alive: null
+      },
+      {
+        URL: 'https://piratebay.live/',
+        Alive: null
+      },
+      {
+        URL: 'https://thepiratebay.zone/',
+        Alive: null
+      },
+      {
+        URL: 'https://tpb.party/',
+        Alive: null
+      },
+      {
+        URL: 'https://piratebay1.live/',
+        Alive: null
+      },
+      {
+        URL: 'https://piratebay1.xyz/',
+        Alive: null
+      },
+    ],
+    TPB_URL: "https://thepiratebay.rocks/",
+    TPB_URL_TOP: "https://thepiratebay.rocks/top",
     TPB_CATEGORIES: {
         audio: {
             music: 101,
